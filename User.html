@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display data</title>
+    <script src="User.js"></script>
+   <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+           margin: 0;
+           padding: 0;
+           line-height: 1.5;
+           font-size: 15px;
+           background-color:#c83deb;
+         }
+         .container{
+            width: 540px;
+            height: auto;
+            background-color: #eee;
+            min-height: 100px auto;
+            margin: 100px auto;
+            border-radius: 5px;
+            
+            
+         }
+         .base{
+          width: 100%;
+          background-color: #eee;
+          overflow: hidden;
+          margin: 0px;
+          float: none;
+          display: block;
+          }
+
+          .base h4{
+            font-size: 22px;
+            text-align: center;
+            font-family: sans-serif;
+            box-shadow: 0 2px #bbbbbb;
+            margin-top: 0;
+            color: blue;
+            background-color: #fff;
+          }
+
+          .block{
+            width: 135px;
+            display: inline-block;
+            padding: 5px 20px;
+            margin-left: 20px;
+          }
+          label{
+            font-size: 22px;
+            letter-spacing: 0.5px;
+            word-spacing: 2.5px;
+            line-height: 0.5px;
+            margin-left: 25px;
+            font-family: sans-serif;
+            font-weight: 300;
+            color: #1073d0;
+           
+          }
+          input[type="text"]{
+            width: 150px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            outline: none;
+            margin: auto;
+            min-height: 50px;
+            border: 2px solid #1073d0;
+            background-color: #f7f7f7;
+            color: #1073d0;
+            font-size: 20px;    
+          }
+          input[type="email"]{
+            width: 150px;
+            padding: 10px 5px;
+            border-radius: 5px;
+            outline: none;
+            margin: auto;
+            min-height: 50px;
+            border: 2px solid #1073d0;
+            background-color: #f7f7f7;
+            color: #1073d0;
+            font-size: 20px;    
+          }
+          input[type="email"]::placeholder{
+            font-size: 15px;
+            font-weight: 400;
+            text-align: center;
+          }
+          input[type="text"]::placeholder{
+            font-size: 15px;
+            font-weight: 400;
+            text-align: center;
+          }
+           input[type="button"]{
+            width: 150px;
+            min-height: 50px;
+            padding: 14px 16px;
+            margin-left: 15%;
+            margin-top: 30px;
+            outline: none;
+            border: none;
+            background-color: #0761b6;
+            color: #ffff;
+            font-size: 20px;
+            border-radius: 5px; 
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 20px;
+            
+           }
+           input[type="button"]:hover{
+            background-color: #003669;
+           }
+           #display{
+            display: block;
+            margin: 10px;
+            margin-top: 35px;
+            padding: 10px;
+            padding-bottom: 20px;
+            font-size: 22px;
+            color: navy;
+            line-height: 1.5;
+            word-spacing: 2.5;
+            font-family: sans-serif;
+            font-weight: normal;
+            overflow: hidden;
+            
+           }
+   </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="base">
+            <h4>Form</h4>
+        </div>
+
+        <form>
+            <div class="block">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="block">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Your Email">
+            </div>
+            <div class="block">
+                <label for="contact">Contact</label>
+                <input type="text" id="contact" placeholder="Enter Your Contact No">
+            </div>
+
+            <div class="base">
+                <input type="button" value="Add" onclick="savedata()">
+                <input type="button" value="show data" onclick="displaydata()">
+            </div>
+        </form>
+        <div id="display"></div>
+    </div>
+    
+</body>
+</html>
